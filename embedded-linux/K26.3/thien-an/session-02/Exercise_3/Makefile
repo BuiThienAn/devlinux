@@ -1,4 +1,4 @@
-CFLAGS := -Iinclude -fPIC
+CFLAGS := -Iinclude -fPIC -Wall -Wextra
 
 SRCS := $(wildcard src/*.c)
 OBJS := $(patsubst src/%.c, obj/%.o, $(SRCS))
@@ -21,7 +21,9 @@ bin/main: obj/main.o static shared | create_dirs
 	gcc obj/main.o -Llib -lcalc -llogger -lm -o bin/main
 
 run: all
-	LD_LIBRARY_PATH=./lib ldd ./bin/main
+	LD_LIBRARY_PATH=./lib ./bin/main
+	@echo "--- Content of app.log ---"
+	@cat app.log
 
 clean:
 	rm -rf obj/ lib/ bin/ app.log

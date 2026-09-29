@@ -22,7 +22,7 @@ int main()
     float div_result = calc_div(x,y);
     if (isnan(div_result))
     {
-        printf("Div: %.2f / %.2f = Error div by 0", x, y);
+        printf("Div: %.2f / %.2f = Error div by 0\n", x, y);
         log_error("Div by zero occurred!\n");
     }
     else
