@@ -9,11 +9,13 @@ int main(int argc, char* argv[])
         return 1;
     }
     char copy_of_s[100];
-    strcpy(copy_of_s, argv[1]);
+    strncpy(copy_of_s, argv[1], sizeof(copy_of_s) - 1);
+    copy_of_s[sizeof(copy_of_s) - 1] = '\0';
     str_to_upper(copy_of_s);
     printf("Upper of string: %s\n", copy_of_s);
     printf("String length: %d\n", str_count(argv[1]));
-    strcpy(copy_of_s, argv[1]);
+    strncpy(copy_of_s, argv[1], sizeof(copy_of_s) - 1);
+    copy_of_s[sizeof(copy_of_s) - 1] = '\0';
     str_reverse(copy_of_s);
     printf("Reversed string: %s\n", copy_of_s);
     return 0;

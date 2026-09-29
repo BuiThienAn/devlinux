@@ -21,4 +21,5 @@ int math_factorial(int n)
     {
         result *= i;
     }
+    return result;
 }

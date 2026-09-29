@@ -3,6 +3,7 @@ SRC_DIR := src
 APP_DIR := app
 OBJ_DIR := obj
 LIB_DIR := lib
+CFLAGS := -Iinclude -fPIC -Wall -Wextra
 
 BIN_NAME := main
 LIB_NAME := mathutils
@@ -21,7 +22,7 @@ build_main: build_lib
 	gcc $(APP_DIR)/main.c -o $(BIN_NAME) -I$(INC_DIR) -L$(LIB_DIR) -l$(LIB_NAME)
 
 run: all
-	./$(BIN_NAME)
+	LD_LIBRARY_PATH=./lib ./main
 
 clean:
 	rm -rf $(OBJ_DIR) $(LIB_DIR) $(BIN_NAME)
