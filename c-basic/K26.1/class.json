@@ -1,5 +1,5 @@
 {
-  "sessions": 20,
+  "sessions": 10,
   "students": {
     "nguyen-quoc-viet": "quocviet1026",
     "phung-chi-minh-quang": "phungchiminhquang",
@@ -12,6 +12,7 @@
     "dinh-thao": "amdzre",
     "tran-anh-sang": "Sang2k1",
     "nguyen-minh-chien": "chiennm914",
-    "do-nguyen-hoang-an": "tadstr"
+    "do-nguyen-hoang-an": "tadstr",
+    "nguyen-cuong":"nc230807-lgtm"
   }
 }
